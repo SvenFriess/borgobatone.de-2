@@ -1,0 +1,88 @@
+FIXED_RESPONSES: dict[str, str] = {
+    # 👋 Begrüßung & Status
+    "ping": "✅ Bot läuft.",
+    "hallo": "👋 Hallo! Ich bin da.",
+    "hello": "👋 Hallo! Ich bin da.",
+    "hi": "👋 Hallo! Ich bin da.",
+    "status": "✅ Bot läuft. Sende `!bot hilfe` für eine Übersicht.",
+
+    # 🏠 Haus & Aufenthalt
+    "adresse": "🏠 **Adresse:** TODO: Straße, Hausnummer, Ort, Postleitzahl.",
+    "checkliste": (
+        "📋 **Abreise-Checkliste**\n"
+        "- Fenster schließen\n"
+        "- Müll entsorgen\n"
+        "- Kühlschrank leeren\n"
+        "- Schlüssel zurücklegen"
+    ),
+    "haustiere": "🐾 **Haustiere** – TODO: Regeln für Hunde/Katzen im Haus & Garten.",
+    "haustech": (
+        "🔌 **Haustechnik**\n"
+        "- Waschmaschine: TODO\n"
+        "- Geschirrspüler: TODO\n"
+        "- Heizung/Warmwasser: TODO"
+    ),
+    "grill": "🍖 **Grill/Pizzaofen** – TODO: Bedienhinweise & Reinigung.",
+
+    # 🕑 Zeiten & Regeln
+    "anreise": "🕑 **Check-in** – TODO: ab xx Uhr.",
+    "abreise": "🕛 **Check-out** – TODO: bis xx Uhr.",
+    "ruhezeiten": "🤫 **Ruhezeiten** – TODO: z. B. 22–7 Uhr draußen leise sein.",
+    "müll": (
+        "🗑️ **Mülltrennung** – TODO: Restmüll, Plastik, Papier.\n"
+        "📅 Abholungstage: TODO"
+    ),
+
+    # 🌐 Kommunikation & Versorgung
+    "wlan": (
+        "📶 **WLAN**\n"
+        "- Name (SSID): TODO-SSID\n"
+        "- Passwort: TODO-PASS\n"
+        "Tipp: Router ggf. neu starten bei Problemen."
+    ),
+    "wifi": "Alias von *wlan*.",
+    "strom": "⚡ **Strom** – Sicherungskasten/FI-Schalter: TODO.",
+    "wasser": "🚰 **Wasser** – Hauptabsperrhahn: TODO.",
+    "gas": "🔥 **Gas** – Info zu Herd/Heizung: TODO.",
+
+    # 🚑 Gesundheit & Notfall
+    "notfall": (
+        "🚨 **Notfallnummern**\n"
+        "- Europaweiter Notruf: 112\n"
+        "- Polizei: 113 (IT)\n"
+        "- Ambulanza: 118\n"
+        "- Feuerwehr: 115\n"
+        "Adresse parat halten!"
+    ),
+    "arzt": "👩‍⚕️ **Nächster Arzt:** TODO Name, Adresse, Telefon.",
+    "apotheke": "💊 **Apotheke:** TODO Name, Adresse, Öffnungszeiten.",
+    "krankenhaus": "🏥 **Krankenhaus:** TODO Name, Adresse, Notaufnahme.",
+
+    # 🍴 Versorgung & Tipps
+    "einkaufen": (
+        "🛒 **Einkaufen – kurz & knackig**\n"
+        "- **S. Martino in Freddana:** Carrefour & Bäckerei.\n"
+        "- Hauptstraße: „Alimentari Pini“ (Brot, Milch, Obst/Gemüse).\n"
+    ),
+    "einkauf": "Alias von *einkaufen*.",
+    "supermarkt": "🛍️ **Supermarkt:** TODO Öffnungszeiten.",
+    "bäckerei": "🥖 **Bäckerei:** TODO Öffnungszeiten.",
+    "pizzeria": "🍕 **Pizzeria:** TODO Restaurantempfehlung.",
+    "märkte": "🧺 **Wochenmärkte:** TODO Orte & Zeiten.",
+
+    # 🚗 Mobilität
+    "parken": "🅿️ **Parken:** TODO Stellplätze/Hinweise.",
+    "tankstelle": "⛽ **Tankstelle:** TODO Nächste Tankstelle mit Adresse.",
+    "bus": "🚌 **Bus:** TODO nächste Haltestelle & Linie.",
+
+    # 🌳 Umgebung & Ausflüge
+    "strand": "🏖️ **Nächster Strand:** TODO Name, Entfernung.",
+    "sehenswürdigkeiten": "🏛️ **Sehenswürdigkeiten:** TODO Top-3-Tipps.",
+    "wandern": "🥾 **Wandern:** TODO Startpunkte & Routen.",
+
+    # 🍕 Pizzaofen (Haus-spezifisch)
+    "pizza": "🍕 Pizza-Info folgt vor Ort – frag gern nach dem Pizzaofen-Setup.",
+
+    # ℹ️ Hilfe
+    "hilfe": "ℹ️ **Borgo-Bot** – Sende `!bot <Thema>`. Beispiele: `!bot wlan`, `!bot notfall`, `!bot einkaufen`."
+}
