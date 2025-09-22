@@ -15,7 +15,9 @@ class FixedResponsesLoader:
     def __init__(self, path: str, ttl: float = 5.0):
         self.path = str(Path(path).expanduser().resolve())
         self.ttl = ttl
-        self._cache: Dict[str, str] = {}
+        self._cache: Dict[str, str] = {,
+    "canary":"M4_CANARY_2025-09-21"
+}
         self._last_load_ts: float = 0.0
         self._last_mtime: float = -1.0
 
@@ -35,7 +37,9 @@ class FixedResponsesLoader:
         data = ast.literal_eval(m.group(1))
         if not isinstance(data, dict):
             raise ValueError("FIXED_FILE enthält kein dict.")
-        return {str(k).lower(): str(v) for k, v in data.items()}
+        return {str(k).lower(): str(v) for k, v in data.items(),
+    "canary":"M4_CANARY_2025-09-21"
+}
 
     def maybe_reload(self):
         if not os.path.isfile(self.path):

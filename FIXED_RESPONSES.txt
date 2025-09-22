@@ -7,7 +7,7 @@ FIXED_RESPONSES: dict[str, str] = {
     "status": "✅ Bot läuft. Sende `!bot hilfe` für eine Übersicht.",
 
     # 🏠 Haus & Aufenthalt
-    "adresse": "🏠 **Adresse:** TODO: Straße, Hausnummer, Ort, Postleitzahl.",
+    "adresse": "🏠 **Adresse:** Borgo Batone, Via di Loppeglia, 55064 Pescaglia LU, Italien",
     "checkliste": (
         "📋 **Abreise-Checkliste**\n"
         "- Fenster schließen\n"
@@ -15,35 +15,35 @@ FIXED_RESPONSES: dict[str, str] = {
         "- Kühlschrank leeren\n"
         "- Schlüssel zurücklegen"
     ),
-    "haustiere": "🐾 **Haustiere** – TODO: Regeln für Hunde/Katzen im Haus & Garten.",
+    "haustiere": "🐾 **Haustiere** Hunde sind im Borgo willkommen.  Bedenkt aber, dass es Menschen gibt, die vor Hunden Angst haben, auch wenn diese gut erzogen sind. Deswegen: Behaltet euren Hund bitte bei euch, so vermeidet ihr auch, dass euer Vierbeiner das Terrain des Borgo als Toilette ansieht. Wer mit Hund anreist, Bitte Angabe bei Buchung, so dass Probleme ggf. im Vorfeld angesprochen werden können ",
     "haustech": (
         "🔌 **Haustechnik**\n"
-        "- Waschmaschine: TODO\n"
-        "- Geschirrspüler: TODO\n"
-        "- Heizung/Warmwasser: TODO"
+        "- Waschmaschine: Es befinden sich zwei Waschmaschinen vor Ort. Eine in der Villa und eine in Casa Gabriello.\n"
+        "- Geschirrspüler: nur in Villa Barsotti, Casa Inglese 2, Casa Gabriello\n"
+        "- Heizung/Warmwasser: Casa Inglese 2 oder Dusche in Villa Barsotti"
     ),
-    "grill": "🍖 **Grill/Pizzaofen** – TODO: Bedienhinweise & Reinigung.",
+    "grill": "🍖 **Grill/Pizzaofen** – Casa Gabriello hat einen Pizzaofen: Bedienhinweise & Reinigung.",
 
     # 🕑 Zeiten & Regeln
-    "anreise": "🕑 **Check-in** – TODO: ab xx Uhr.",
-    "abreise": "🕛 **Check-out** – TODO: bis xx Uhr.",
+    "anreise": "🕑 **Check-in** – Stärkung Gemeinschaftsmuskel. Treffen sich die Borgis vor Ort einmal pro Woche zum „Check-In“: ab xx Uhr.",
+    "abreise": "🕛 **Check-out** – \"Wir bitten euch, die Zimmer/ Häuser generell so zu hinterlassen, wie ihr sie gerne vorfinden würdet. Vor der Abreise solltet ihr die Räume einmal durchsaugen, wischen und lüften.\": bis xx Uhr.",
     "ruhezeiten": "🤫 **Ruhezeiten** – TODO: z. B. 22–7 Uhr draußen leise sein.",
     "müll": (
-        "🗑️ **Mülltrennung** – TODO: Restmüll, Plastik, Papier.\n"
-        "📅 Abholungstage: TODO"
+        "🗑️ **Mülltrennung** – \"Die Müllsortierung erfolgt in allen Küchen. Pro Müllart gibt es einen spezifischen Sack/Farbe und spezifische Abholtage, bitte entnehmt diese dem Infoblatt links neben der Spüle in der Villa.\""
+        "📅 Abholungstage: siehe aktuller Plan in Villa"
     ),
 
     # 🌐 Kommunikation & Versorgung
     "wlan": (
         "📶 **WLAN**\n"
-        "- Name (SSID): TODO-SSID\n"
-        "- Passwort: TODO-PASS\n"
+        "- Name (SSID): WLAN Name (SSID): Borgo\n"
+        "- Passwort: geheim >> aktuell siehe Villa\n"
         "Tipp: Router ggf. neu starten bei Problemen."
     ),
     "wifi": "Alias von *wlan*.",
-    "strom": "⚡ **Strom** – Sicherungskasten/FI-Schalter: TODO.",
-    "wasser": "🚰 **Wasser** – Hauptabsperrhahn: TODO.",
-    "gas": "🔥 **Gas** – Info zu Herd/Heizung: TODO.",
+    "strom": "⚡ **Strom** – Sicherungskasten/FI-Schalter: \"Beschreibung der jeweiligen Häuser. Die Sicherungen für den Strom im Gartenfindet ihr neben dem Küchenschrank über dem Mülleimer in der Küche der Villa.\"",
+    "wasser": "🚰 **Wasser** – Hauptabsperrhahn: \"Wasser kommt aus einer Quelle in den Bergen und wird durch ein komplexes System aus Rohrleitungen, Zwischenspeichern und Pumpen den einzelnen Häusern zugeführt. Koordinaten WGS84: 43° 55′ 54.28″ N, 10° 24′ 58.53″ E Dezimal: 43.931744,10.416258 UTM: Zone 32T 613678 4856267 Geo URI: geo:43.931744,10.416258\".",
+    "gas": "🔥 **Gas** – Info zu Herd/Heizung: \"Regelung der Heizung: im Heizraum und über Stockwerksthermostate.\".",
 
     # 🚑 Gesundheit & Notfall
     "notfall": (
@@ -54,9 +54,9 @@ FIXED_RESPONSES: dict[str, str] = {
         "- Feuerwehr: 115\n"
         "Adresse parat halten!"
     ),
-    "arzt": "👩‍⚕️ **Nächster Arzt:** TODO Name, Adresse, Telefon.",
-    "apotheke": "💊 **Apotheke:** TODO Name, Adresse, Öffnungszeiten.",
-    "krankenhaus": "🏥 **Krankenhaus:** TODO Name, Adresse, Notaufnahme.",
+    "arzt": "👩‍⚕️ **Nächster Arzt:** In Lucca findet ihr ein Ärztehaus : Via dei Pubblici Macelli 37, 55100 Lucca LU",
+    "apotheke": "💊 **Apotheke:** \"Farmacia Comunale Camaiore 3, Via Roma, 37a, 55041 Camaiore LU Die Apotheke am Bahnhof in Lucca ist durchgehend auch an Sonntagen geöffnet. Die Apotheke am Bahnhof In Lucca ist durchgehend auch am Sonntag geöffnet.\"",
+    "krankenhaus": "🏥 **Krankenhaus:** \"Ospedale San Luca (30 min, 13 km), Via Gugliemo Lippi Francesconi 556, Lucca. Ospedale Lersilia (40 min, 1 km), Via Aurelia Sud 335, Camaiore\"",
 
     # 🍴 Versorgung & Tipps
     "einkaufen": (
@@ -65,18 +65,18 @@ FIXED_RESPONSES: dict[str, str] = {
         "- Hauptstraße: „Alimentari Pini“ (Brot, Milch, Obst/Gemüse).\n"
     ),
     "einkauf": "Alias von *einkaufen*.",
-    "supermarkt": "🛍️ **Supermarkt:** TODO Öffnungszeiten.",
-    "bäckerei": "🥖 **Bäckerei:** TODO Öffnungszeiten.",
+    "supermarkt": "🛍️ **Supermarkt:** \"Supermärkte\n• Gleich in S.Martino in Freddana gibt es den Supermarkt Carrefour. Dort in der\nNähe ist auch eine Bäckerei für frisches Brot.\n• Sonst sind die Großmärkte von Esselunga, Coop oder Carrefour in Lucca oder\nViareggio sehr empfehlenswert.\n• Nah am Dorf unten an der Tankstelle an der Hauptstraße ist der kleine Shop\n“Alimentari Pini” für Brot, Milch…(bei Millennium Dancing). Es gibt auch dort\nauch frisches Gemüse und Obst, und die Tochter Veronica spricht Englisch.\n• Bioladen in Lucca: NaturaSi, Via Roma, 37a, 55041 Camaiore LU\"",
+    "bäckerei": "🥖 **Bäckerei:** Gleich in S.Martino in Freddana  in der Nähe vom Supermarkt Carrefour ist auch eine Bäckerei für frisches Brot",
     "pizzeria": "🍕 **Pizzeria:** TODO Restaurantempfehlung.",
-    "märkte": "🧺 **Wochenmärkte:** TODO Orte & Zeiten.",
+    "märkte": "🧺 **Wochenmärkte:** \"Mittwoch und Samstag in Lucca für Obst und Gemüse. Außerdem Mittwoch und Samstag von 8-13 Uhr Kleidermarkt in Lucca: Kleider-, Haushalts-,\nPflanzenmarkt und ein wenig Gemüse. Samstag im Foro Boario (in Monte San Quirico, 15 min mit dem Auto) lokaler Markt für Gemüse und\nObst\"",
 
     # 🚗 Mobilität
-    "parken": "🅿️ **Parken:** TODO Stellplätze/Hinweise.",
-    "tankstelle": "⛽ **Tankstelle:** TODO Nächste Tankstelle mit Adresse.",
-    "bus": "🚌 **Bus:** TODO nächste Haltestelle & Linie.",
+    "parken": "🅿️ **Parken:** Die kleine Straße durchs Borgo sieht nicht aus wie eine Durchgangsstraße - ist es aber! Bitte haltet diese unbedingt frei (auch zum Wenden) und parkt unterhalb der Villa am Straßenrand. Zum Ausladen kann man bis zur Villa fahren. Danach bitte gleich das Fahrzeug unterhalb des Dorfes parken.",
+    "tankstelle": "⛽ **Tankstelle:** Nah am Dorf unten an der Tankstelle an der Hauptstraße",
+    "bus": "🚌 **Bus:** Es gibt einen Bus von vom Bahnhof und von verschiedenen Bushaltestellen ins Borgo. TBD",
 
     # 🌳 Umgebung & Ausflüge
-    "strand": "🏖️ **Nächster Strand:** TODO Name, Entfernung.",
+    "strand": "🏖️ **Nächster Strand:** Siaggia Libera, Naturstrand etwa 35 min vom Borgo entfernt",
     "sehenswürdigkeiten": "🏛️ **Sehenswürdigkeiten:** TODO Top-3-Tipps.",
     "wandern": "🥾 **Wandern:** TODO Startpunkte & Routen.",
 
