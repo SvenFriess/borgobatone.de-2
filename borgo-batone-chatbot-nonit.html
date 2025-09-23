@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Borgo Batone Chatbot – Einfach erklärt</title>
+  <meta name="description" content="Einfache Anleitung für alle, die den Borgo Batone Chatbot benutzen oder daran mitwirken – ohne Technik-Details." />
+  <style>
+    :root{
+      --bg:#0b2530; --brand:#0e6ba8; --ink:#0d1b2a; --muted:#5e7380; --paper:#fff;
+      --card:#f4f8fb; --accent:#e9f4ff; --ok:#0a7a46; --warn:#b98900; --err:#a1191a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;line-height:1.6;background:#fafafa;color:var(--ink)}
+    header{background:var(--bg);color:#fff;padding:1.1rem 1.2rem}
+    header h1{margin:0;font-size:1.85rem}
+    header p{margin:.25rem 0 0;color:#cfe8f3}
+    nav{margin-top:.5rem}
+    nav a{color:#cfe8f3;margin-right:1rem;text-decoration:none;font-weight:600}
+    main{max-width:1000px;margin:2rem auto;padding:1.25rem;background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    h2{color:var(--brand);margin-top:1.6rem}
+    h3{color:var(--ink);margin-top:1.1rem}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border-left:6px solid var(--brand);padding:1rem;border-radius:10px}
+    .kbd{display:inline-block;padding:.15rem .44rem;border:1px solid #cbd5e1;border-bottom-width:2px;border-radius:6px;background:#f8fafc;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em}
+    .badge{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:var(--accent);color:#073b63;font-weight:700;font-size:.8rem;vertical-align:middle}
+    .ok{color:var(--ok);font-weight:700}
+    .warn{color:var(--warn);font-weight:700}
+    .err{color:var(--err);font-weight:700}
+    .small{font-size:.94rem;color:var(--muted)}
+    ul.check > li{margin:.35rem 0}
+    .callout{background:#fefae8;border-left:6px solid var(--warn);padding:.8rem 1rem;border-radius:10px}
+    .qa{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:1rem}
+    .qa h4{margin:.2rem 0 .2rem}
+    .two-col{display:grid;grid-template-columns:1fr;gap:1rem}
+    @media(min-width:800px){ .two-col{grid-template-columns:1fr 1fr} }
+    footer{margin:2rem auto 1rem;text-align:center;color:#muted}
+    /* Umschalter Layout */
+    .topnav{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .switcher a{color:#fff;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.35);padding:.35rem .6rem;border-radius:999px}
+    .switcher a:hover{background:rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Borgo Batone Chatbot <span class="badge">Einfach erklärt</span></h1>
+    <p>Diese Seite richtet sich an alle ohne IT-Hintergrund.</p>
+    <nav class="topnav">
+      <div>
+        <a href="borgo-batone-chatbot.html">Öffentliche Chatbot-Seite</a>
+        <a href="wissen.html">Wissen</a>
+        <a href="borgo-batone-chatbot-nonit.html">Einfach</a>
+      </div>
+      <div class="switcher">
+        🔀 <a href="borgo-batone-chatbot-intern.html" aria-label="Zur Technik-Ansicht wechseln">Zur Technik-Ansicht</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h3>Was ist das?</h3>
+        <p>Der <strong>Borgo Batone Bot</strong> (kurz: B3) ist ein Helfer in unserer <strong>Signal-Gruppe</strong>. Er beantwortet kurze Fragen
+           und gibt Infos rund um Borgo Batone.</p>
+        <ul>
+          <li><strong>Ort:</strong> Der Bot läuft auf <em>einem Mac Mini</em>.</li>
+          <li><strong>Datenschutz:</strong> Die Antworten werden <strong>lokal</strong> erstellt, nicht in einer fremden Cloud.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>So benutzt du ihn</h3>
+        <p>Schreibe in der Signal-Gruppe eine Nachricht, die mit <span class="kbd">!Bot</span> beginnt.</p>
+        <ul>
+          <li><span class="kbd">!Bot ping</span> → Testet, ob der Bot wach ist.</li>
+          <li><span class="kbd">!Bot wlan</span> → Gibt Infos zum WLAN vor Ort.</li>
+          <li><span class="kbd">!Bot einkaufen</span> → Nützliche Einkaufsinfos.</li>
+          <li><span class="kbd">!Bot Notfall</span> → Wichtige Kontakthinweise.</li>
+        </ul>
+        <p class="small">Wichtig: <span class="kbd">!Bot</span> immer voranstellen – sonst reagiert er nicht.</p>
+      </div>
+      <div class="card">
+        <h3>Schnell-Check (funktioniert es?)</h3>
+        <ul class="check">
+          <li>Antwortet <span class="kbd">!Bot ping</span> mit „pong“ oder „ok“? <span class="ok">Ja → Alles gut.</span></li>
+          <li>Keine Antwort? <span class="warn">Prüfe:</span> Richtige Gruppe? <span class="kbd">!Bot</span> davor? Internet ok?</li>
+          <li>Weiterhin keine Antwort? <span class="err">Melde dich bei der Kontaktperson (siehe unten).</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <h2>Typische Aufgaben</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Informationen abrufen</h3>
+        <ul>
+          <li><span class="kbd">!Bot anreise</span> – Hinweise zur Anreise</li>
+          <li><span class="kbd">!Bot parken</span> – Regeln & Plätze</li>
+          <li><span class="kbd">!Bot hausordnung</span> – wichtigste Punkte</li>
+          <li><span class="kbd">!Bot kontakt</span> – Ansprechpersonen</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Hilfe in der Gruppe</h3>
+        <p>Wenn du unsicher bist, schreibe einfach in die Gruppe. Jemand hilft dir
+           oder fragt für dich den Bot mit dem richtigen Befehl.</p>
+      </div>
+    </div>
+
+    <h2>Wenn etwas nicht funktioniert</h2>
+    <div class="callout">
+      <ol>
+        <li>Teste <span class="kbd">!Bot ping</span>.</li>
+        <li>Schreibe die Nachricht <strong>in der richtigen Gruppe</strong> und mit <span class="kbd">!Bot</span> davor.</li>
+        <li>Starte Signal neu oder probiere es später noch einmal.</li>
+        <li>Hilft das nicht: Bitte die Kontaktperson, den Bot neu zu starten.</li>
+      </ol>
+      <p class="small">Technische Details sind nicht nötig – einfach Bescheid sagen.</p>
+    </div>
+
+    <h2>Änderungen an Antworten</h2>
+    <p>Manche Antworten sind fest hinterlegt (z. B. für WLAN oder Notfall). Wenn du eine <strong>Korrektur</strong> oder
+       <strong>Ergänzung</strong> hast, gib sie an die Kontaktperson weiter. Sie/Er pflegt das zentral ein.</p>
+
+    <h2>Sicherheit & Datenschutz (kurz)</h2>
+    <ul>
+      <li>Der Bot arbeitet lokal auf <em>einem Mac Mini</em>.</li>
+      <li>Es werden keine Gespräche an Drittanbieter weitergegeben.</li>
+      <li>Bitte keine sensiblen personenbezogenen Daten in die Gruppe schreiben.</li>
+    </ul>
+
+    <h2>Rollen & Zuständigkeiten</h2>
+    <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #e3e8ef;border-radius:10px;overflow:hidden">
+      <thead>
+        <tr style="background:#f6fbff;color:#074e78">
+          <th style="padding:.6rem .75rem;text-align:left">Rolle</th>
+          <th style="padding:.6rem .75rem;text-align:left">Aufgaben</th>
+          <th style="padding:.6rem .75rem;text-align:left">Kontakt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef"><strong>Nutzer:innen</strong></td>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef">Fragen mit <span class="kbd">!Bot</span> stellen, Hinweise geben</td>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef">Signal-Gruppe</td>
+        </tr>
+        <tr>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef"><strong>Redaktion</strong></td>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef">Inhalte pflegen (z. B. WLAN-Text, Notfall)</td>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef">Sven • Alex</td>
+        </tr>
+        <tr>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef"><strong>Technik</strong></td>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef">Bot neu starten, Funktionsprüfung</td>
+          <td style="padding:.6rem .75rem;border-top:1px solid #e3e8ef">Sven • Alex</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Kurze FAQ</h2>
+    <div class="qa">
+      <h4>Reagiert der Bot auf jede Nachricht?</h4>
+      <p>Nein. Er reagiert nur, wenn die Nachricht mit <span class="kbd">!Bot</span> beginnt.</p>
+
+      <h4>Kann ich dem Bot eine lange Frage stellen?</h4>
+      <p>Ja, aber halte es am besten kurz. Beispiel: <span class="kbd">!Bot parken</span> statt eines langen Textes.</p>
+
+      <h4>Wer sieht meine Fragen?</h4>
+      <p>Die gesamte Signal-Gruppe. Schreibe deshalb keine privaten Daten hinein.</p>
+
+      <h4>Der Bot sagt etwas Falsches. Was tun?</h4>
+      <p>Kurze Info in die Gruppe oder direkt an die Kontaktperson – wir korrigieren das zentral.</p>
+    </div>
+
+    <h2>Do’s & Don’ts</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Do’s</h3>
+        <ul class="check">
+          <li><span class="kbd">!Bot</span> vor jede Frage setzen</li>
+          <li>Kurze, klare Stichworte verwenden</li>
+          <li>Falsche Infos melden – wir bessern nach</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Don’ts</h3>
+        <ul class="check">
+          <li>Keine privaten oder sensiblen Daten posten</li>
+          <li>Keine langen Romane – besser einzelne Fragen</li>
+          <li>Nicht mehrfach hintereinander spammen</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Kontakt</h2>
+    <p>Hilfe oder Korrekturwunsch? Bitte an <strong>Sven</strong> oder <strong>Alex</strong> wenden
+       (am einfachsten über die Signal-Gruppe).</p>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Borgo Batone · Strategix-AI · Einfache Anleitung – Stand: 22.09.2025
+  </footer>
+</body>
+</html>

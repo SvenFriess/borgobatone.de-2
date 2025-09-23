@@ -32,16 +32,25 @@
     .small{font-size:.92rem;color:var(--muted)}
     footer{margin:2rem auto 1rem;text-align:center;color:var(--muted)}
     .callout{background:#fefae8;border-left:6px solid var(--warn);padding:.8rem 1rem;border-radius:10px}
+    /* Umschalter Layout */
+    .topnav{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .switcher a{color:#fff;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.35);padding:.35rem .6rem;border-radius:999px}
+    .switcher a:hover{background:rgba(255,255,255,.08)}
   </style>
 </head>
 <body>
   <header>
     <h1>Borgo Batone Chatbot <span class="badge">Intern</span></h1>
     <p>Interne Seite für Mitwirkende (Betrieb, Pflege & Weiterentwicklung von B3).</p>
-    <nav>
-      <a href="wissen.html">Wissen</a>
-      <a href="borgo-batone-chatbot.html">Öffentliche Chatbot-Seite</a>
-      <a href="borgo-batone-chatbot-intern.html">Intern</a>
+    <nav class="topnav">
+      <div>
+        <a href="wissen.html">Wissen</a>
+        <a href="borgo-batone-chatbot.html">Öffentliche Chatbot-Seite</a>
+        <a href="borgo-batone-chatbot-intern.html">Intern</a>
+      </div>
+      <div class="switcher">
+        🔀 <a href="borgo-batone-chatbot-nonit.html" aria-label="Zur non-IT Ansicht wechseln">Zur non-IT Ansicht</a>
+      </div>
     </nav>
   </header>
 
@@ -52,7 +61,7 @@
         <ul>
           <li><strong>Name:</strong> B3 – Borgo Batone Bot</li>
           <li><strong>Kanäle:</strong> Signal-Gruppen (Trigger <span class="kbd">!Bot</span>)</li>
-          <li><strong>Modelle:</strong> lokale LLMs via Ollama (z. B. <code>mistral:instruct</code>, <code>dolphin-phi</code>)</li>
+          <li><strong>Modelle:</strong> lokale LLMs via Ollama (z. B. <code>mistral:instruct</code>, <code>dolphin-phi</code>)</li>
           <li><strong>Compliance:</strong> DSGVO-konform, lokal betrieben</li>
         </ul>
       </div>
@@ -76,7 +85,7 @@
 
     <h2>Schnellstart für Mitwirkende</h2>
     <ol>
-      <li>In die Testgruppe „Borgo-Bot TEST“ posten (Trigger <span class="kbd">!Bot</span> nutzen).</li>
+      <li>In SIGNAL in die Testgruppe „Borgo-Bot TEST“ posten (Trigger <span class="kbd">!Bot</span> nutzen).</li>
       <li>Fixantwort anpassen in <code>FIXED_RESPONSES.txt</code> (Format: <code>trigger => antwort</code>).</li>
       <li>Bot neu laden: Service stoppen/neu starten (siehe unten) oder Datei hot-reload, falls unterstützt.</li>
     </ol>
@@ -142,14 +151,14 @@ ls -lh "$BKDIR/borgobatone.de-2-$TS.tar.gz"
         <tr>
           <td><code>bot.pid</code></td>
           <td>PID-Datei des Hauptprozesses.</td>
-          <td class="small">Zum sicheren Stoppen nutzen (z. B. <code>kill $(cat bot.pid)</code>).</td>
+          <td class="small">Zum sicheren Stoppen nutzen (z. B. <code>kill $(cat bot.pid)</code>).</td>
         </tr>
       </tbody>
     </table>
 
     <h2>Troubleshooting</h2>
     <ul>
-      <li class="callout"><strong>Signal-Receiver kollidiert:</strong> Meldung „Config file is in use by another instance“. &rarr; Alle <code>signal-cli … receive</code>-Prozesse beenden (siehe Stop-Block) und sauber neu starten.</li>
+      <li class="callout"><strong>Signal-Receiver kollidiert:</strong> Meldung „Config file is in use by another instance“. → Alle <code>signal-cli … receive</code>-Prozesse beenden (siehe Stop-Block) und sauber neu starten.</li>
       <li><strong>Keine Antwort in Gruppen:</strong> Prüfen, ob <span class="kbd">!Bot</span>-Prefix gesetzt ist und der Bot in der Gruppe Mitglied ist.</li>
       <li><strong>LLM reagiert nicht:</strong> Läuft Ollama? Modell geladen? (<code>ollama list</code>, <code>ollama run</code> Test).</li>
       <li><strong>Fixantwort greift nicht:</strong> Schreibweise/Trigger exakt? Datei-Pfad im Log gegenprüfen.</li>
@@ -180,7 +189,7 @@ ls -lh "$BKDIR/borgobatone.de-2-$TS.tar.gz"
   </main>
 
   <footer>
-    &copy; 2025 Borgo Batone · Strategix‑AI · Interne Dokumentation – Stand: 09.09.2025
+    &copy; 2025 Borgo Batone · Strategix-AI · Interne Dokumentation – Stand: 09.09.2025
   </footer>
 </body>
 </html>
